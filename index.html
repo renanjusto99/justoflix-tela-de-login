@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./images/justoflix-logo-16x16.png">
+    <title>Justoflix Brasil</title>
+    
+</head>
+
+<body>
+    <!--Cabeçalho do site que contém o logo.-->
+    <header> 
+        <!--Logo com link.-->
+        <a href="#">
+            <img src="./images/justoflix-logo-principal.png" alt="logo">
+        </a>
+    </header>
+
+    <!--Container contendo o formulário de login.-->
+    <div class="form-container">
+        <h2>Entrar</h2>
+
+        <!--Formulário do site.-->
+        <form action="#">
+
+            <!--Campo e-mail/telefone/usuário.-->
+            <div id="user" class="form-space">
+                <input type="text" id="inputText" required onblur="user_validation(this)">
+                <label>E-mail ou Número de Telefone</label>
+            </div>
+
+            <!--Campo senha.-->
+            <div id="password" class="form-space">
+                <input type="password" id="inputPassword" required onblur="password_validation(this)">
+                <label>Senha</label>
+
+                <!--Botão mostrar senha.-->
+                <button id="show" onclick="togglePasswordVisibility()">MOSTRAR</button>
+            </div>
+
+            <!--Botão de acesso ao catálogo de filmes (caso validado).-->
+            <button id="enter" type="submit" onclick="validation()">Entrar</button>
+            
+            <!--Campo de lembre-se de mim + ajuda.-->
+            <div class="support">
+                <div class="remember-me">
+                    <input type="checkbox" checked>
+                    <label for="remember-me">Lembre-se de mim</label>
+                </div>
+                <a href="#">Precisa de ajuda?</a>
+            </div>
+        </form>
+
+        <!--Campo de acesso ao cadastro de novo usuário.-->
+        <p>Novo por aqui? <a href="#">Assine agora</a></p>
+        <small>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. <a href="#">Saiba mais.</a></small> 
+    </div>  
+
+    <script src="index.js"></script>
+
+</body>
+</html>
